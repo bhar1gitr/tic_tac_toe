@@ -68,16 +68,24 @@ public class GFG_tic_tac_toe {
             System.out.println();
         }
     }
-
 //  Player1 inserting element
     static void player_1_insert(char[][] board,int x,int y){
-        board[x][y] = 'X';
+        if(board[x][y] == 'O'){
+            System.out.println("You can't insert");
+        }else{
+            board[x][y] = 'X';
+        }
     }
 
 //    Player2 inserting element
     static void player_2_insert(char[][] board,int x,int y){
-        board[x][y] = 'O';
+        if(board[x][y] == 'X'){
+            System.out.println("You can't insert");
+        }else{
+            board[x][y] = 'O';
+        }
     }
+
 
 //    Checking conditions
     static int check(char[][] board,String player1,String player2){
